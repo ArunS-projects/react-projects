@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX in JavaScript</title>
+</head>
+<body>
+    <h1>We are covering AJAX in JS in this file</h1>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET','https://fakestoreapi.com/products/1', true); //true for asynchronous
+        xhr.onload = function(){
+            if(xhr.status === 200){
+                console.log('length: ', xhr.response.length);
+                let res = JSON.parse(xhr.response);
+                console.log(res);
+                console.log('ID', res.id);
+                console.log('Price: ', res.price);
+                console.log('Rating: ', res.rating.rate);
+                console.log('Rating count: ', res.rating.count);
+                <!-- document.writeln(res.image); -->
+                console.log(xhr.response);
+                console.log('Response data type is: ', typeof(xhr.response));
+            }else{
+                console.log('Request failed with status: ', xhr.status);
+            }
+        };
+
+        xhr.onerror = function(){
+            console.log('Request failed.');
+        };
+        xhr.send();
+
+        fetch('https://fakestoreapi.com/products/1')
+        .then(response => response.json())
+        .then(data => console.log('Response of Fetch:', data.category))
+        .catch(error => console.error('Error: ', error));
+    </script>
+</body>
+</html>

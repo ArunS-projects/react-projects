@@ -1,0 +1,9 @@
+.form{
+    position: absolute;
+    background-color: cornsilk;
+    margin: auto;
+    border-radius: 5px solid #E38735;
+    text-align: center;
+    align-items: center;
+    display: block;
+}

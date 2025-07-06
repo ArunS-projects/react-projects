@@ -1,0 +1,9 @@
+.btn-pressed{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.btn-over{
+    color: blanchedalmond;
+    background-color: black;
+}

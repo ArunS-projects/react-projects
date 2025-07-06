@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX API Call Example</title>
+</head>
+<body>
+    <h1>User Data</h1>
+    <button id="fetchButton">Fetch User Data</button>
+    <div id="userData"></div>
+    <div id="error"></div>
+
+    <script>
+        // Function to handle the API call and error handling
+        async function fetchUserData() {
+            const apiUrl = 'https://fakestoreapi.com/users'; // Replace with your API endpoint
+            const userDataDiv = document.getElementById('userData');
+            const errorDiv = document.getElementById('error');
+            
+            // Clear previous data and errors
+            userDataDiv.innerHTML = '';
+            errorDiv.innerHTML = '';
+            
+            try {
+                const response = await fetch(apiUrl); // Make the API call
+
+                if (!response.ok) { // Check if response status is OK (200-299)
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+
+                const data = await response.json(); // Parse the response as JSON
+
+                if (!data || !Array.isArray(data) || data.length === 0) { // Validate the data
+                    throw new Error('Invalid data received');
+                }
+
+                // Display the user data
+                data.forEach(user => {
+                    const userDiv = document.createElement('div');
+                    userDiv.innerHTML = `<p>Name: ${user.username}</p><p>Email: ${user.email}</p>`;
+                    userDataDiv.appendChild(userDiv);
+                });
+            } catch (error) {
+                // Handle errors
+                errorDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+
+        // Add event listener to the button
+        document.getElementById('fetchButton').addEventListener('click', fetchUserData);
+    </script>
+</body>
+</html>

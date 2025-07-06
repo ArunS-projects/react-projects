@@ -1,0 +1,36 @@
+core JavaScript:
+a. variable var
+b. functions
+c. conditional statements
+d. data types
+e. operators
+f. loops
+g. DOM manipulation
+h. window object
+i. user input by - prompt
+j. element methods
+k. event handling
+l. JS validations
+m. Form validations
+n. in built classes - array, string, math, date
+
+Advance JS:
+a. variables: const, let
+b. arrow function ()=>
+c. Template Literals
+d. Enhanced object literals
+e. generator, modules in JS
+f. import and export statements
+g. spread operator
+h. rest parameters
+i. data structure - map, set, array
+j. advance array functions and loops
+k. Asynchronous JS - setTimeout and setInterval
+l. OOPS 
+m. Prototype and AJAX
+n. callback, promises, async-wait
+o. array and object destructuring
+p. DOM in JS - real vs Virtual DOM
+q. Synchronous vs Asynchronous JS
+r. OOPS concepts
+s. prototype and AJAX
