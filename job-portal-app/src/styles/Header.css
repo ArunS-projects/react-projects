@@ -1,0 +1,19 @@
+.header{
+    background-color: thistle;
+    border-radius: 10px;
+    display: flex;
+    gap: 300px;
+    text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+/* div{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+} */

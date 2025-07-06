@@ -1,0 +1,23 @@
+.footer{
+  margin-top: 30px;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  gap: 10px;
+}
+ 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
